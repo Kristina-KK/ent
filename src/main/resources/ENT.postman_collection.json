@@ -1,0 +1,179 @@
+{
+	"info": {
+		"_postman_id": "3e5bab93-a785-4b48-9505-7d40a77cac44",
+		"name": "ENT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31565727",
+		"_collection_link": "https://api333-0527.postman.co/workspace/TIS~4df356e2-b0f2-4c33-a702-50254fab71b8/collection/31565727-3e5bab93-a785-4b48-9505-7d40a77cac44?action=share&source=collection_link&creator=31565727"
+	},
+	"item": [
+		{
+			"name": "CAR - 18 SEK",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"vehicleType\": \"CAR\",\n  \"timestamp\": [\n    \"2013-02-08T06:20:00\",\n    \"2013-02-08T06:50:00\",\n    \"2013-02-08T07:10:00\"\n  ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/calculate-tax",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"calculate-tax"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MOTOCYCLE - 0 SEK",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"vehicleType\": \"MOTORCYCLE\",\n  \"timestamp\": [\n    \"2013-02-08T07:15:00\",\n    \"2013-02-08T08:15:00\"\n  ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/calculate-tax",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"calculate-tax"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CAR - 0 SEK - SUNDAY",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"vehicleType\": \"CAR\",\n  \"timestamp\": [\n    \"2013-02-10T07:30:00\",  // 2013-02-10 is sunday\n    \"2013-02-10T08:30:00\"\n  ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/calculate-tax",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"calculate-tax"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CAR - 0 SEK - MAX 60 SEK",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"vehicleType\": \"CAR\",\n  \"timestamp\": [\n    \"2013-02-08T06:20:00\",\n    \"2013-02-08T07:15:00\",\n    \"2013-02-08T08:10:00\",\n    \"2013-02-08T15:10:00\",\n    \"2013-02-08T16:00:00\",\n    \"2013-02-08T17:30:00\"\n  ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/calculate-tax",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"calculate-tax"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CAR - 0 SEK - MAX DAILY TAX 60 SEK",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"vehicleType\": \"CAR\",\n  \"timestamp\": [\n    \"2013-02-08T06:20:00\",\n    \"2013-02-08T07:15:00\",\n    \"2013-02-08T08:10:00\",\n    \"2013-02-08T15:10:00\",\n    \"2013-02-08T16:00:00\",\n    \"2013-02-08T17:30:00\"\n  ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/calculate-tax",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"calculate-tax"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CAR - 0 SEK - TAX FREE 0 SEK",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"vehicleType\": \"CAR\",\n  \"timestamp\": [\n    \"2013-07-15T07:00:00\",\n    \"2013-07-15T08:00:00\"\n  ]\n}\n\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/calculate-tax",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"calculate-tax"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

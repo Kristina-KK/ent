@@ -1,0 +1,43 @@
+spring:
+  application:
+    name: ent
+ 
+logging:
+  level:
+    root: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"
+
+tax-config:
+  city: Gothenburg
+  maxDailyTax: 60
+  taxFreeMonths: [ 7 ]
+  taxFreeVehicleTypes: [ MOTORCYCLE, BUS, EMERGENCY ]
+  rules:
+    - start: "06:00"
+      end: "06:29"
+      amount: 8
+    - start: "06:30"
+      end: "06:59"
+      amount: 13
+    - start: "07:00"
+      end: "07:59"
+      amount: 18
+    - start: "08:00"
+      end: "08:29"
+      amount: 13
+    - start: "08:30"
+      end: "14:59"
+      amount: 8
+    - start: "15:00"
+      end: "15:29"
+      amount: 13
+    - start: "15:30"
+      end: "16:59"
+      amount: 18
+    - start: "17:00"
+      end: "17:59"
+      amount: 13
+    - start: "18:00"
+      end: "18:29"
+      amount: 8
